@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Swapper</title>
+	<script src="jqury/jqury.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		#container
+		{
+			box-sizing: border-box;
+			width: 400px;
+			height: 200px;
+			border: 3px solid black;
+			margin-top: 10%;
+			margin-left: 380px;
+			text-align: center;
+			font-size: 25px;
+		}
+		#box1{
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			display: inline-block;
+			background-color: red;
+			margin-left:400px;
+			margin-top: 5%; 
+		}
+		#box2{
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			display: inline-block;
+			margin-top: 5%;
+			margin-left:60px;
+			background-color: blue;
+		}
+		#box3{
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			display: inline-block;
+			margin-top: 5%;
+			margin-left:100px;
+			background-color: green;
+		}
+		#box4{
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			display: inline-block;
+			margin-top: 5%;
+			margin-left:100px;
+			background-color: black;
+		}
+		#head{
+			text-align: center;
+			border: 1px double red;
+
+		}
+	</style>
+	<h1 id="head">Color Swapper Using Jqury</h1>
+<div id="container">
+click on the below color to change the color!
+</div>
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
+</body>
+<script>
+	$(document).ready(function(){
+		$('#box1').click(function(){
+			$('#container').css('background-color','red');
+		})
+	})
+	$(document).ready(function(){
+		$('#box2').click(function(){
+			$('#container').css('background-color','blue');
+		})
+	})
+	$(document).ready(function(){
+		$('#box3').click(function(){
+			$('#container').css('background-color','green');
+		})
+	})
+	$(document).ready(function(){
+		$('#box4').on('click',function(){
+			$('#container').css({'background-color':'black','color':'#fff'})
+		})
+	})
+</script>
+</html>
